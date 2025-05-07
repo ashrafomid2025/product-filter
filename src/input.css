@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@theme {
+  --font-inter: "Inter", "monospace";
+}
+@layer components {
+  .card {
+    @apply h-[230px] w-[180px] rounded-sm text-center border hover:border-green-400 transition-all duration-700 ease-linear p-2 mx-2;
+  }
+  .card-img {
+    @apply h-[170px] w-full;
+  }
+  .card-h1 {
+    @apply text-xl text-gray-400;
+  }
+}
