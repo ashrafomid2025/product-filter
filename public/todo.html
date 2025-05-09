@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="new.js" defer></script>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="relative">
+    <div
+      class="w-full h-screen overflow-y-scroll bg-linear-60 from-gray-300 to-gray-200"
+    >
+      <!-- header -->
+      <div
+        id="headerDiv"
+        class="h-24 flex items-center justify-center overflow-hidden bg-sky-500 text-white text-center"
+      ></div>
+      <!-- input -->
+      <div class="w-full flex my-3 justify-center">
+        <input
+          id="input"
+          class="border rounded-sm p-4 focus:outline-0 rounded-r-none placeholder:text-xs"
+          type="text"
+          placeholder="لیست کار های روزانه ات را اضافه کن"
+        />
+        <button
+          id="addBtn"
+          class="bg-sky-500 py-3 px-4 text-white rounded-sm rounded-l-none"
+        >
+          <i class="fas fa-add"></i>
+        </button>
+      </div>
+      <div class="w-full flex justify-center">
+        <button
+          id="showBtn"
+          class="bg-sky-500 py-3 px-4 text-white rounded-sm rounded-l-none"
+        >
+          show List
+        </button>
+      </div>
+      <!-- showing todo list -->
+      <div
+        id="showListDiv"
+        class="w-full flex justify-center flex-col items-center"
+      ></div>
+    </div>
+    <div
+      id="toast"
+      class="absolute top-1 right-2 bg-green-400 p-4 rounded-sm text-white hidden"
+    >
+      <h1>one Item added</h1>
+    </div>
+  </body>
+</html>
