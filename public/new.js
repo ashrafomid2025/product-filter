@@ -16,10 +16,43 @@ showBtn.addEventListener("click",()=>{
         div.classList.add("todoListDiv");
         const h1 = document.createElement("h1");
         const text = document.createTextNode(item);
+        const i = document.createElement("i");
+        i.setAttribute("class","fas fa-trash");
+        i.setAttribute("id",`id0`);
+        // const id0 = document.getElementById("id0");
         h1.appendChild(text);
         div.appendChild(h1);
+        div.appendChild(i);
+       
     }
-})
+});
+
+// object delete, insert naming object key
+
+const person = {
+  firstName: "Ali",
+  LastName: "Hamidi",
+  brotherName: "Rahman",
+}
+person.firstName = "Layla";
+
+delete person.brotherName;
+
+//
+//  const person2 ={
+//     9: "Ali",
+//     1: "Qurbani",
+//     3: "Rahman"
+//  }
+// for in
+for(let key in person){
+    console.log(key ,": ",person[key]);
+
+}
+
+
+
+
 
 const toast = document.getElementById("toast");
 addButton.addEventListener("click",()=>{
