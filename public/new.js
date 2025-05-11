@@ -29,12 +29,14 @@ showBtn.addEventListener("click",()=>{
 
 // object delete, insert naming object key
 
+const age = "Age23";
+
 const person = {
   firstName: "Ali",
-  LastName: "Hamidi",
-  brotherName: "Rahman",
+  "Last Name": "Hamidi",
+  [age]: 23,
 }
-person.firstName = "Layla";
+person.sisterName = "Layla";
 
 delete person.brotherName;
 

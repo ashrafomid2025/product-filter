@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Meal</title>
+    <script src="favoriteMeal.js" defer></script>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <div class="h-screen w-full bg-linear-90 from-gray-100 to-gray-200">
+      <div
+        class="w-[80%] mx-auto div-shadow py-4 px-3.5 bg-white rounded-md grid gap-1 grid-cols-3 grid-rows-3"
+      >
+        <h1 class="col-span-3 text-2xl font-bold">Favorite Meal</h1>
+        <div class="col-span-3">
+          <label for="" class="block">Meal Name</label>
+          <input
+            id="mealName"
+            type="text"
+            required
+            placeholder="Enter the food name"
+            class="border-b w-[80%] px-3 py-2 focus:outline-0"
+          />
+        </div>
+        <div>
+          <label for="">Extra Information (Name)</label>
+          <input
+            id="keyName"
+            type="text"
+            placeholder="Enter the key name"
+            class="border-b py-2 focus:outline-0"
+          />
+        </div>
+        <div>
+          <label for="">Information</label>
+          <input
+            id="extraInfo"
+            type="text"
+            placeholder="Enter the extra info"
+            class="border-b py-2 focus:outline-0"
+          />
+        </div>
+        <button
+          id="addBtn"
+          class="bg-red-500 hover:bg-red-600 transition-all duration-700 hover:cursor-pointer py-3 px-4 rounded-md text-white"
+        >
+          Add To List
+        </button>
+      </div>
+      <div
+        class="my-4 mx-auto w-[80%] flex justify-between p-4 bg-white div-shadow py-2 px-5 rounded-md"
+      >
+        <input
+          id="searchText"
+          placeholder="Search With Name"
+          type="search"
+          class="border-b p-4 w-[70%] focus:outline-0"
+        />
+        <button
+          id="searchBtn"
+          class="py-2 rounded-md hover:cursor-pointer hover:bg-red-600 transition-all duration-700 px-5 bg-red-500 text-white"
+        >
+          Search
+        </button>
+      </div>
+      <!-- showing the search result -->
+      <div id="showResult"></div>
+    </div>
+  </body>
+</html>

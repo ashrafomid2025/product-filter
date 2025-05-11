@@ -18,4 +18,7 @@
   .todoListDiv {
     @apply w-[230px] my-2.5 flex justify-between rounded-sm shadow-2xs bg-white text-black p-4;
   }
+  .div-shadow {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
 }
