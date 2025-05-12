@@ -12,14 +12,14 @@
       <div
         class="w-[80%] mx-auto div-shadow py-4 px-3.5 bg-white rounded-md grid gap-1 grid-cols-3 grid-rows-3"
       >
-        <h1 class="col-span-3 text-2xl font-bold">Favorite Meal</h1>
+        <h1 class="col-span-3 text-2xl font-bold">Favorite Movies</h1>
         <div class="col-span-3">
-          <label for="" class="block">Meal Name</label>
+          <label for="" class="block">Movie Name</label>
           <input
             id="mealName"
             type="text"
             required
-            placeholder="Enter the food name"
+            placeholder="Enter the movie name"
             class="border-b w-[80%] px-3 py-2 focus:outline-0"
           />
         </div>
@@ -65,7 +65,19 @@
         </button>
       </div>
       <!-- showing the search result -->
-      <div id="showResult"></div>
+      <div id="showResult" class="w-[80%] bg-white p-4"></div>
+      <div
+        id="toastMessage"
+        class="p-4 bg-green-400 text-white absolute right-1.5 top-1.5 hidden"
+      >
+        <h1>Success! 1 Movies added</h1>
+      </div>
+      <div
+        id="danger"
+        class="p-4 bg-red-400 text-white absolute right-1.5 top-1.5 hidden"
+      >
+        <h1>Warning! No Movies Added</h1>
+      </div>
     </div>
   </body>
 </html>

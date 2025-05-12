@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-green-400: oklch(79.2% 0.209 151.711);
@@ -192,6 +193,15 @@
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
+  .top-1\.5 {
+    top: calc(var(--spacing) * 1.5);
+  }
+  .right-1 {
+    right: calc(var(--spacing) * 1);
+  }
+  .right-1\.5 {
+    right: calc(var(--spacing) * 1.5);
+  }
   .right-2 {
     right: calc(var(--spacing) * 2);
   }
@@ -255,9 +265,6 @@
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .grid-rows-2 {
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
   .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
@@ -278,9 +285,6 @@
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
-  }
-  .gap-1\.5 {
-    gap: calc(var(--spacing) * 1.5);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -322,6 +326,9 @@
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
