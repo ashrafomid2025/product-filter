@@ -11,8 +11,10 @@ function createMovieList(){
   if(movieName.value !=="" && keyName.value !=="", extraInfo.value!==""){
   const movie = {
     id: Math.random()*10,
-    [movieName.value]: movieName.value,
+    info:{
+    title: movieName.value,
     [keyName.value]: extraInfo.value
+  }
   }
   movieName.value = "";
   keyName.value = "";
@@ -35,17 +37,36 @@ showList(moviesList);
 
 
 // select showResult
-const showResult = document.getElementById("showResult");
 function showList(arr){
-    showResult.innerHTML = "";
-    for(let item of arr){
+  const showResult = document.getElementById("showResult");
+   showResult.innerHTML = ""
+  arr.forEach(element => {
+  
     const h1 = document.createElement("h1");
-    for(let key in item){
-        const movieName = item[key];
-        const text = document.createTextNode(movieName);
-        h1.appendChild(text);
+    
+    for(let key in element.info){
+      let text = element.info.title+"-" + key+ "-"+element.info[key];
+      h1.textContent = text;
+    }
+    showResult.append(h1);
+  });
+}
 
-}
-showResult.appendChild(h1);
-}
-}
+searchBtn.addEventListener("click",()=>{
+  let text = searchText.value;
+   let filteredArr = moviesList.filter(movie=>{
+    return movie.info.title.includes(text)
+  });
+
+  const showResult = document.getElementById("showResult");
+  showResult.innerHTML = ""  
+  filteredArr.forEach(element => {
+    const h1 = document.createElement("h1");
+    
+    for(let key in element.info){
+      let text = element.info.title+"-" + key+ "-"+element.info[key];
+      h1.textContent = text;
+    }
+    showResult.append(h1);
+  });
+})

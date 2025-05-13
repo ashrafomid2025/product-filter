@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../public/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <div class="h-screen pt-20 bg-gray-200">
+      <div class="w-[80%] p-6 bg-white mx-auto">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque illo
+          debitis temporibus laboriosam labore soluta quam voluptatum nihil iste
+          placeat magnam minima totam consequatur commodi, quibusdam ut libero
+          laborum incidunt.
+        </h1>
+        <i
+          id="copy"
+          class="fas fa-copy p-3 m-2 hover:cursor-pointer bg-blue-500 text-white text-2xl"
+        ></i>
+        <div
+          id="copyMessage"
+          class="p-3 rounded-md hidden bg-gray-400 text-white text-center w-fit mx-auto"
+        >
+          <h1>Copy to clipboard</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      const h1 = document.querySelector("h1");
+      const copyBtn = document.getElementById("copy");
+      const message = document.getElementById("copyMessage");
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(h1.innerText);
+          message.classList.remove("hidden");
+          setTimeout(() => {
+            message.classList.add("hidden");
+          }, 5000);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>
