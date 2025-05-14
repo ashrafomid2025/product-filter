@@ -24,9 +24,15 @@
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   }
   .div-r {
-    @apply w-[80px] inline-block hover:border-gray-500 transition-all duration-700 h-[130px] border border-gray-200 bg-transparent rounded-2xl rotate-45;
+    @apply w-[80px] inline-block hover:border-gray-500 transition-all duration-700 h-[130px] border border-gray-300 bg-transparent rounded-2xl rotate-45;
   }
   /* .div-r {
     @apply w-[80px] absolute top-0 h-[120px] border border-gray-200 bg-transparent rounded-2xl rotate-45;
   } */
+  .bookDiv {
+    @apply w-[200px] text-center border rounded-xl h-[230px] p-3;
+  }
+  .bookImg {
+    @apply w-full h-[160px] rounded-xl opacity-70 hover:opacity-100;
+  }
 }

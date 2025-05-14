@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="favBook.js" defer></script>
+  </head>
+  <body>
+    <div class="bg-gray-300 h-screen overflow-y-scroll">
+      <!-- form -->
+      <div
+        class="bg-white p-4 w-[80%] mx-auto my-5 rounded-md shadow-2xs flex flex-col justify-center items-center"
+      >
+        <h1 class="text-center font-bold text-xl my-3">یک کتاب را علاوه کن</h1>
+        <div>
+          <input
+            class="py-3 px-4 text-gray-400 border focus:outline-0"
+            type="text"
+            placeholder="لطفا نام کتاب را وارد نمایید"
+            id="bookName"
+          />
+          <input
+            class="py-3 px-4 my-3 text-gray-400 border focus:outline-0"
+            type="text"
+            placeholder="لطفا در باره کتاب توضیحات دهید"
+            id="bookDescription"
+          />
+        </div>
+        <input
+          id="imgUrl"
+          type="text"
+          class="py-3 px-4 text-gray-400 border w-full my-3 focus:outline-0"
+          placeholder="یک لینک تصویر از کتاب را علاوه نمایید"
+        />
+        <button
+          id="addBtn"
+          class="py-3 px-4 bg-green-400 text-center text-white rounded-md"
+        >
+          اضافه کردن
+        </button>
+      </div>
+      <!-- list -->
+      <div
+        id="bookList"
+        class="w-[80%] mx-auto my-3 bg-white rounded-md shadow-2xs flex justify-evenly flex-wrap"
+      ></div>
+      <div
+        id="warning"
+        class="p-4 absolute top-1.5 right-1.5 hidden bg-red-500 text-white text-center"
+      >
+        <h1>لطفا فورم را پر نموده و دوباره تلاش نمایید</h1>
+      </div>
+      <div
+        id="success"
+        class="p-4 absolute top-1.5 right-1.5 hidden bg-green-500 text-white text-center"
+      >
+        <h1>یک کتاب موفقانه اضافه شد</h1>
+      </div>
+    </div>
+  </body>
+</html>
