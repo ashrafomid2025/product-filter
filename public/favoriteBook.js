@@ -30,25 +30,7 @@ let oddNumbers = numbers.filter((item)=>{
     return item%2 !==0;
 });
 
-// numbers.forEach((item, index, array)=>{
-//     array[index]= item+2;
-// });
 
-// const doubledNumber = numbers.map((item, index, array)=>{
-//     return item+2;
-// })
-
-
-
-// numbers.forEach((item, index, arr)=>{
-//     arr[index] = Math.pow(item,3 );
-// });
-
-
-// numbers.forEach(double);
-// function double(number, index, arr){
-//     arr[index] = number*9;
-// }
 
 
 const searchText = document.getElementById("searchText");
