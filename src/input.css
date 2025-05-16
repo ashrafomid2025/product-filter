@@ -35,4 +35,8 @@
   .bookImg {
     @apply w-full h-[160px] rounded-xl opacity-70 hover:opacity-100;
   }
+
+  .rotatedDiv {
+    @apply w-[80px] hover:border-gray-600 transition-all duration-700 h-[130px] inline-block rounded-md rotate-45  bg-transparent border border-gray-300;
+  }
 }

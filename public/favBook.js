@@ -56,3 +56,34 @@ function showList(){
         bookDiv.append(div);
     })
 }
+
+// search
+const search = document.getElementById("search");
+
+search.addEventListener("input", () => {
+    const bookDiv = document.getElementById("bookList");
+    bookDiv.innerHTML = "";
+    let text = search.value;
+
+    let filteredArr = bookList.filter((item) => {
+        return item.name.includes(text);
+    });
+
+    filteredArr.forEach((book) => {
+        const div = document.createElement("div");
+        div.classList.add("bookDiv");
+
+        const image = document.createElement("img");
+        image.setAttribute("src", book.imgUrl);
+        image.classList.add("bookImg");
+
+        const h1 = document.createElement("h1");
+        h1.textContent = book.name;
+
+        const p = document.createElement("p");
+        p.textContent = book.description;
+
+        div.append(image, h1, p);
+        bookDiv.append(div);
+    });
+});
